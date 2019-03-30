@@ -18,7 +18,7 @@ to_date = today_date.strftime('%Y-%m-%d')
 #open file to write response
 #obj = open('resp.json', 'wb')
 
-#Get headlines for country INDIA 'in'
+#Using NewsAPI.org to get news using API
 response = requests.get('https://newsapi.org/v2/everything?q={}&from={}&to={}&sortBy={}&pageSize={}&apiKey={}'.format(q, from_date, to_date, sortBy, pageSize, apiKey))
 
 #If status code == 200 write response in json file
