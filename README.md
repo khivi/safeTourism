@@ -1,1 +1,1 @@
-This project uses [NewsAPI.org](NewsAPI.org) to get news.
+This project uses [NewsAPI.org](https://NewsAPI.org/) to get news.
