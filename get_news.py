@@ -4,7 +4,7 @@ import datetime
 import os
 
 apiKey = os.environ['NEWSAPI']
-location = 'goa'
+location = 'kerala'
 q = '{0} AND {0} tourism'.format(location)
 pageSize = 50
 sortBy = 'popularity'
@@ -24,6 +24,7 @@ response = requests.get('https://newsapi.org/v2/everything?q={}&from={}&to={}&so
 #If status code == 200 write response in json file
 if response.status_code == 200:
     #obj.write(response.json())
+    print("Fetching news...")
     with open('resp.json', 'w') as outfile:
         json.dump(response.json(), outfile)
     #Write headlines to headlines file
@@ -36,9 +37,11 @@ if response.status_code == 200:
     else:
         r = resp['totalResults']
     for index in range(r):
+        print(".", end="")
         data = resp['articles'][index]['description'] + "\n"
         #print(type(data))
         obj.write(data)
+    print("Total Fetched: {}".format(r))
     obj.close()
 else:
     print("Error response code: {}".format(response.status_code))
