@@ -4,8 +4,8 @@ import datetime
 import os
 
 apiKey = os.environ['NEWSAPI']
-location = 'kerala'
-q = '{0} AND {0} tourism'.format(location)
+location = 'jaipur'
+q = '{0} OR {0} tourism'.format(location)
 pageSize = 50
 sortBy = 'popularity'
 country = 'in'
@@ -38,7 +38,7 @@ if response.status_code == 200:
         r = resp['totalResults']
     for index in range(r):
         print(".", end="")
-        data = resp['articles'][index]['description'] + "\n"
+        data = resp['articles'][index]['description'] + ".\n"
         #print(type(data))
         obj.write(data)
     print("Total Fetched: {}".format(r))
