@@ -17,6 +17,7 @@ def create_response_main():
     lines = [line.rstrip('\n') for line in open('./headlines.txt')]
     json_data = {'document': {'type': 'PLAIN_TEXT', 'content': 'PAYLOAD'}, 'encodingType': 'UTF8'}
     score = 0
+    print("Running Analysis...")
     for r in range(len(lines)):
     #for r in range(1):
         json_data['document']['content'] = lines[r]
