@@ -6,8 +6,7 @@ This project uses [NewsAPI.org](https://NewsAPI.org/) to get news.
 - Add newsapi.org API key to environment variable as `NEWSAPI`
 - Add google API key to environment variable as `GCPAPI`
 
-Run the driver script `main.py`
-`python3 main.py`
+Run the driver script - `python3 main.py`
 
 ## SETUP
 - Packages required:
