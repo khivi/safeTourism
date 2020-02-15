@@ -1,3 +1,5 @@
+# [DEPRECATED]
+
 This project uses [NewsAPI.org](https://NewsAPI.org/) to get news.
 
 # HOW TO...
