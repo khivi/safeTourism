@@ -1,0 +1,9 @@
+flask
+requests
+bs4
+sklearn
+pandas
+numpy
+google.cloud
+google-cloud-storage
+google-cloud-language
